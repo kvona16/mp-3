@@ -58,7 +58,6 @@ export function Projects() {
         clearFields,
     } = useCalculator();
 
-    // Safely checks string output for negative numbers without needing isNaN
     const isNegative = output.startsWith('-');
 
     return (

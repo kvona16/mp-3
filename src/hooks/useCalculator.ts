@@ -22,7 +22,6 @@ export function useCalculator() {
         const num1 = Number(firstNumber);
         const num2 = Number(secondNumber);
 
-        // Check for invalid numbers without using isNaN()
         const isNum1Invalid = num1 !== num1 || firstNumber.trim() === '';
         const isNum2Invalid = num2 !== num2 || secondNumber.trim() === '';
 
@@ -31,7 +30,6 @@ export function useCalculator() {
             return;
         }
 
-        // Operation lookup using an Index Signature instead of Record<string, ...>
         const operations: { [key: string]: (a: number, b: number) => string } = {
             '+': (a, b) => String(a + b),
             '-': (a, b) => String(a - b),
